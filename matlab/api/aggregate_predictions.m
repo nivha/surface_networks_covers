@@ -64,23 +64,7 @@ function aggregate_predictions(gptoolbox_path, preds_dir, segmentation_path, fla
             cc = c(ceil(size(c,1)*double(GTsegmentation)/numClasses),:);
             subplot(1,2,2); patch('vertices',V,'faces',T,'FaceVertexCData',cc,'FaceColor','flat','EdgeColor','none','FaceAlpha',1);
             title('Ground Truth', 'FontSize', 30);
-            axis equal
-
-%             if size(pred_img, 1) == numClasses
-%                 [~, pred_plot] = max(pred_img, [], 1);
-%                 pred_plot = squeeze(pred_plot);
-%             else
-%                 pred_plot = pred_img;
-%             end
-%             subplot(2,2,3); imshow(double(pred_plot)/numClasses); axis equal; colormap jet
-%             title('prediction', 'FontSize', 20)
-%             
-%             label_path = fullfile(LABEL_DIR, shortname);
-%             load(label_path);
-%             labeled_img = data;
-%             subplot(2,2,4); imshow(double(labeled_img)/numClasses); axis equal; colormap jet
-%             title('label', 'FontSize', 20);
-%             
+            axis equal           
             figpath = fullfile(AGGS_DIR, num2str(ii));
             savefig(figpath);
             disp([datestr(datetime('now')) ' ' 'saved ' figpath]);

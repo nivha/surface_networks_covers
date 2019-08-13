@@ -4,7 +4,7 @@ function hb = homology_of_torus(T,V)
     %E are the edges of the cut graph = maximal edges such that cutting
     %along them gives a disc
     E = cut_graph(V,T);
-    % ake an adjacency matrix from E
+    % make an adjacency matrix from E
     Ea = sparse(E(:,1),E(:,2),ones(size(E,1),1),size(V,1),size(V,1));
     Ea = Ea + Ea';
     %find the first cycle on the cut graph

@@ -20,21 +20,22 @@ procedure product_one_tuple(G,cycle_types,permutations,index,Z,prod)
             product_one_tuple(G,cycle_types,permutations,index + 1,Z,prodt);
         end if;
     end while; 
-end procedure  ;
+end procedure ;
 
-G := Sym(5);
+//main code
+// d is the degree of the cover
+d :=5;
+G := Sym(d);
 cycle_types := [];
 permutations := [];
-cycle_types[1] := G!(1,2,3,4,5);
-cycle_types[2] := G!(1,2,3)(4,5);
-cycle_types[3] := G!(4,5);
-cycle_types[4] :=  G!(4,5);
-cycle_types[5] :=  G!(4,5);
+
+//Here you should input permutations with prescribed cycle structure 
+//corresponding to a ramification type
+//below is an example with [[1^2 3]^5]
+cycle_types[1] := G!(1,2,3);
+cycle_types[2] := G!(1,2,3);
+cycle_types[3] := G!(1,2,3);
+cycle_types[4] :=  G!(1,2,3);
+cycle_types[5] :=  G!(1,2,3);
 permutations[1] := cycle_types[1];
 product_one_tuple(G,cycle_types,permutations,2,G,cycle_types[1] );
- a:=  G!(1, 2, 3, 4, 5);
-   b:=  G!(1, 5)(2, 4, 3);
-   c:= G!(3, 4);
-   d:= G!(1, 3);
-   e:= G!(3, 4);
-a*b*c*d*e;
