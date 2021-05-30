@@ -16,7 +16,7 @@ If you find our work useful in your research, please consider citing:
 		booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
 		pages={632--641},
 		year={2019}
-		}"
+	}
 
 ## Code Credits
 We used code from open-source repositories, including [S2CNN](https://github.com/jonas-koehler/s2cnn), [Tiramisu](https://github.com/bfortuner/pytorch_tiramisu), among others.
