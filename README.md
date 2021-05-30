@@ -1,6 +1,6 @@
 # Surface Networks via General Covers
 
-Pytorch implementation for paper [Surface Networks via General Covers](https://arxiv.org/abs/1812.10705), to appear in ICCV 2019.
+Pytorch implementation for paper [Surface Networks via General Covers](https://arxiv.org/abs/1812.10705), ICCV 2019.
 
 By: Niv Haim, Nimrod Segol, Heli Ben-Hamu, Haggai Maron and Yaron Lipman 
 
